@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja" style="scroll-behavior: smooth;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MILZTECH | Creativity & Technology</title>
+    <meta
+      name="description"
+      content="MILZTECHは、AI・クリエイティブ・テクノロジーを融合し、企業の成長と新しい体験設計を支援するクリエイティブテックカンパニーです。AI開発、撮影、画像・映像制作、デジタルソリューションを提供します。"
+    />
+    <meta
+      name="keywords"
+      content="MILZTECH, Milztech, AI開発, クリエイティブ, テクノロジー, 写真撮影, 動画撮影, 画像編集, 映像編集, 東京, 企業サイト"
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="MILZTECH Inc." />
+    <meta name="theme-color" content="#000000" />
+    <link rel="canonical" href="https://milz.tech/" />
+    <link rel="alternate" hreflang="ja" href="https://milz.tech/" />
+    <link rel="alternate" hreflang="en" href="https://milz.tech/" />
+    <link rel="alternate" hreflang="x-default" href="https://milz.tech/" />
+
+    <meta property="og:site_name" content="MILZTECH" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MILZTECH | Creativity & Technology" />
+    <meta
+      property="og:description"
+      content="AI・クリエイティブ・テクノロジーを融合し、企業の成長と新しい体験設計を支援するMILZTECHの公式サイト。"
+    />
+    <meta property="og:url" content="https://milz.tech/" />
+    <meta property="og:image" content="https://milz.tech/og-image.jpg" />
+    <meta property="og:image:alt" content="MILZTECH official website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MILZTECH | Creativity & Technology" />
+    <meta
+      name="twitter:description"
+      content="AI・クリエイティブ・テクノロジーを融合し、企業の成長と新しい体験設計を支援するMILZTECHの公式サイト。"
+    />
+    <meta name="twitter:image" content="https://milz.tech/og-image.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "MILZTECH",
+        "alternateName": ["Milztech", "MILZTECH Inc.", "マイルズテック株式会社"],
+        "url": "https://milz.tech/",
+        "logo": "https://milz.tech/logo.png",
+        "description": "AI・クリエイティブ・テクノロジーを融合し、企業の成長と新しい体験設計を支援するクリエイティブテックカンパニー。",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "5-20-10-102 Sakuragaoka",
+          "addressLocality": "Setagaya-ku",
+          "addressRegion": "Tokyo",
+          "postalCode": "156-0054",
+          "addressCountry": "JP"
+        },
+        "founder": [
+          {
+            "@type": "Person",
+            "name": "Takahiro Wada",
+            "jobTitle": "Chairman"
+          },
+          {
+            "@type": "Person",
+            "name": "Masashi Takano",
+            "jobTitle": "CCIO"
+          }
+        ],
+        "sameAs": []
+      }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Syne:wght@400..800&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #000000;
+        --fg: #ffffff;
+        --accent: #ffffff;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg);
+        color: var(--fg);
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      .font-syne { font-family: 'Syne', sans-serif; }
+      .font-serif { font-family: 'Playfair Display', serif; }
+      .mask-container {
+        position: relative;
+        overflow: hidden;
+        display: block;
+      }
+      ::selection { background: #fff; color: #000; }
+      .noise {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        pointer-events: none;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+      .atmosphere {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: radial-gradient(circle at 50% -20%, #1a1a1a 0%, #000 70%);
+      }
+      .section-divider {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      }
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: #000; }
+      ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: #444; }
+      .text-depth {
+        text-shadow: 0 10px 50px rgba(0,0,0,0.8);
+      }
+      .sr-only-seo {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.29.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3",
+    "vite": "https://esm.sh/vite@^7.3.1"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div class="noise"></div>
+    <div class="atmosphere"></div>
+
+    <div class="sr-only-seo">
+      <h1>MILZTECH | Creativity & Technology</h1>
+      <p>
+        MILZTECHは、AI開発、クリエイティブ制作、写真撮影、動画撮影、画像編集、映像編集、
+        デジタルソリューションの設計と実装を行う東京拠点のクリエイティブテックカンパニーです。
+      </p>
+      <p>
+        AIと表現力を掛け合わせ、企業の成長支援、ブランド体験の設計、業務効率化、
+        クリエイティブ制作、撮影・編集業務まで一気通貫で提供します。
+      </p>
+    </div>
+
+    <noscript>
+      <section style="padding:40px;max-width:960px;margin:0 auto;color:#fff;background:#000;line-height:1.8;">
+        <h1 style="font-size:32px;margin-bottom:16px;">MILZTECH</h1>
+        <p style="margin-bottom:12px;">MILZTECHは、AI・クリエイティブ・テクノロジーを融合し、企業の成長と新しい体験設計を支援するクリエイティブテックカンパニーです。</p>
+        <p style="margin-bottom:12px;">AI開発、写真撮影、動画撮影、画像編集、映像編集、デジタルソリューションの提供を行っています。</p>
+        <p>JavaScriptを有効にすると、サイト全体をご覧いただけます。</p>
+      </section>
+    </noscript>
+
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
