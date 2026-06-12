@@ -1,4 +1,3 @@
-
 export type Language = 'ja' | 'en';
 
 export interface Dictionary {
@@ -11,12 +10,10 @@ export interface Dictionary {
   core_title: string;
   core_body: string;
   svc_ai_desc: string;
-  // AI Projects
   svc_ai_project_estate: string;
   svc_ai_detail_estate: string;
   svc_ai_project_openframe: string;
   svc_ai_detail_openframe: string;
-  // Production
   svc_pv_desc: string;
   svc_pv_project: string;
   svc_pv_detail: string;
@@ -36,7 +33,6 @@ export interface Dictionary {
   form_sending: string;
   form_success: string;
   form_ai_reply_label: string;
-  // Company Outline
   company_title: string;
   co_name_label: string;
   co_name_value: string;
